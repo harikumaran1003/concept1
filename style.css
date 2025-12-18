@@ -170,6 +170,50 @@ section {
     font-size: 26px;
   }
 }
+
+/* ================= GALLERY ANIMATION ================= */
+
+/* GALLERY GRID (safe defaults) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* GALLERY ITEM */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* IMAGE DEFAULT */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* HOVER → CONTINUOUS ANIMATION */
+.gallery-item:hover img {
+  cursor: pointer;
+  animation: floatZoom 1.6s ease-in-out infinite;
+}
+
+/* KEYFRAMES */
+@keyframes floatZoom {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.06) translateY(-8px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
 /* ================= SERVICES ================= */
 .services {
   background: #f4f7fa;
@@ -664,5 +708,6 @@ footer {
     right: 15px;
   }
 }
+
 
 
