@@ -134,29 +134,42 @@ section {
   padding-top: 20px;
 }
 /* ================= STATS ================= */
-.stats {
+.stats{
   background: #0b2c3d;
-  color: #fff;
-  padding: 50px 20px;
+  
 }
-.stat-box{
-  padding: 10px;
-  border: 2px solid #fff;
-  height: 140px;
-  width: 200px;
+/* STATS GRID – DEFAULT (DESKTOP) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  color: #fff;
   text-align: center;
 }
 
-.stats-grid {
-  display: flex;
-  justify-content: space-around;
+/* STAT BOX (optional styling) */
+.stat-box {
+  border: 2px solid white;
+  padding: 20px;
 }
 
 .stat-box .count {
-  font-size: 48px;
-  color: #00c389;
+  font-size: 32px;
+  font-weight: bold;
+  color:#00c389;
+  display: block;
 }
 
+/* MOBILE VIEW → 2 x 2 GRID */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-box .count {
+    font-size: 26px;
+  }
+}
 /* ================= SERVICES ================= */
 .services {
   background: #f4f7fa;
@@ -651,4 +664,5 @@ footer {
     right: 15px;
   }
 }
+
 
