@@ -139,6 +139,13 @@ section {
   color: #fff;
   padding: 50px 20px;
 }
+.stat-box{
+  padding: 10px;
+  border: 2px solid #fff;
+  height: 140px;
+  width: 200px;
+  text-align: center;
+}
 
 .stats-grid {
   display: flex;
@@ -644,3 +651,4 @@ footer {
     right: 15px;
   }
 }
+
